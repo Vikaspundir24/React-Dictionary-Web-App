@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import dictionarylogo from "../assets/dictionary-icon.svg";
-import moonLogo from "../assets/icon-moon.svg";
 import "../Components/Navbar.css";
+import { dataContext } from "../Contexts/dataContext";
 
 function Navbar() {
+  const {setFont} = useContext(dataContext)
   return (
     <div className="navbar">
       <img src={dictionarylogo} className="logo" ></img>
       <div className="right-nav">
-        <select className="select-font">
-          <option>Roboto</option>
-          <option>Serif</option>
-          <option>Mono</option>
+        <select onChange= {(e) => setFont(e.target.value)} className="select-font">
+          <option value="Roboto">Roboto</option>
+          <option value="Open Sans">Open Sans</option>
+          <option value="Mono">Mono</option>
         </select>
         <div className="mode">
-          <button>Dark Mode</button>
-          <img src={moonLogo}></img>
+          <button>Change Font</button>
         </div>
       </div>
     </div>

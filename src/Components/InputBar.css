@@ -5,7 +5,7 @@
     align-items: center;
 }
 .input-bar input{
-   width: 45vw;
+   width: 90%;
    padding: 1rem 2rem;
    border-radius: 20px;
    border: 2px solid rgba(0, 0, 0, 0.2);
@@ -15,7 +15,7 @@
    font-size: 16px;
 }
 .input-bar input::placeholder{
-   color: rgba(0, 0, 0, 0.5);
+   color: rgba(0, 0, 0, 0.3);
 }
 
 .input-bar input:hover{
@@ -25,4 +25,13 @@
 
 .input-bar img{
     width: 30px;
+}
+
+@media screen and (max-width : 767px) {
+
+    .input-bar input{
+        padding: 0.5rem 1rem;
+        width: 80%;
+        font-size: 12px;
+    }
 }

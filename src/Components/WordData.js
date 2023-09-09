@@ -1,9 +1,8 @@
-import { createElement } from "react";
+import "./WordData.css";
 import logo from "../assets/icon-new-window.svg";
 
 function WordData(wordData) {
   let data = wordData.data[0];
-  console.log(data);
   let definitions = data.meanings[0].definitions;
   let definitionsTwo = data.meanings[1].definitions;
   let synonyms = data.meanings[0].synonyms;
@@ -41,11 +40,11 @@ function WordData(wordData) {
         </ul>
       </div>
       <p>
-        Example: <span>{data.meanings[1].definitions[0].example}</span>
+        <span className="eg">Example: </span>  {data.meanings[1].definitions[0].example}
       </p>
-      <div>
+      <div className="footer">
         <p className="source">
-          <p>Source</p>
+          <p>Source:</p>
           <a href={data.sourceUrls} className="link">
             {data.sourceUrls}
             <img src={logo}></img>

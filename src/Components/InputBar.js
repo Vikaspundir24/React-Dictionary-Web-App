@@ -7,13 +7,17 @@ function InputBar() {
   const { getData } = useContext(dataContext);
   const [input, setInput] = useState("");
 
-  const submitClickHandler = () => {
-    if (input) {
-      getData(input)
-      setInput("")
+  const enterKeyHandler = (event) => {
+    if (event.key === "Enter") {
+      submitClickHandler();
     }
-    else{
-      alert("Enter a word to search")
+  };
+  const submitClickHandler = (e) => {
+    if (input) {
+      getData(input);
+      setInput("");
+    } else {
+      alert("Enter a word to search");
     }
   };
 
@@ -23,6 +27,7 @@ function InputBar() {
         placeholder="Web Dictionary"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={enterKeyHandler}
       />
       <img src={searchLogo} onClick={submitClickHandler} />
     </div>

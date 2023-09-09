@@ -1,0 +1,72 @@
+.main-data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.data-head {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-bottom: 20px;
+}
+
+.data-head h1 {
+    font-size: 3rem;
+}
+
+.data-head p {
+    color: rgb(201, 60, 201);
+    font-weight: 800;
+    margin-top: 10px;
+
+}
+
+.data-mid p {
+    color: grey;
+}
+
+.meaning-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 40px;
+}
+
+.synonyms-data {
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-bottom: 20px;
+}
+
+.synonyms-data p {
+    color: grey;
+}
+.synonyms-data ul{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   align-items: center;
+}
+
+.synonyms-data ul h6 {
+    color: rgb(201, 60, 201);
+    font-size: 18px;
+}
+
+.eg{
+    color: grey;
+}
+.footer{
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+.source{
+    display: flex;
+    gap: 5px;
+}
+

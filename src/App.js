@@ -8,22 +8,28 @@ import WordData from "./Components/WordData";
 function App() {
   const [showMeaning, setShowMeaning] = useState(false);
   const [wordData, setWordData] = useState("");
+  const [font, setFont] = useState("");
   async function getData(word) {
+    
     const response = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     );
     const data = await response.json();
-    setWordData(data);
-    setShowMeaning(true)
-    return data;
+    if (!data.title) {
+      setWordData(data);
+      setShowMeaning(true);
+      return data;
+    } else {
+      alert("Nothing Found for this word");
+    }
   }
 
   return (
-    <div className="main-wrapper">
-      <Navbar />
-      <dataContext.Provider value={{ getData }}>
+    <div style={{ fontFamily: font }} className="main-wrapper">
+      <dataContext.Provider value={{ getData, setFont }}>
+        <Navbar />
         <InputBar />
-        {showMeaning ? <WordData data = {wordData}/> : ""}
+        {showMeaning ? <WordData data={wordData} /> : ""}
       </dataContext.Provider>
     </div>
   );

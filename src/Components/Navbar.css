@@ -13,7 +13,7 @@
 select , button{
     border: none;
     outline: none;
-    padding: 1rem 2rem ;
+    padding: 1rem 1rem ;
     background-color: white;
     font-weight: 700;
     font-size: 18px;
@@ -25,10 +25,22 @@ select , button{
     justify-content: space-between;
     align-items: center;
     border-left: 2px solid hsl(0, 0%, 0%,0.3);
-    gap: 10px;
-    
+    gap: 0px; 
 }
 
 .logo{
     width: 3vw;
+}
+
+@media screen and (max-width : 767px) {
+    select, button{
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+    .logo{
+        width: 2rem;
+    }
+    .right-nav{
+        gap: 10px;
+    }
 }
