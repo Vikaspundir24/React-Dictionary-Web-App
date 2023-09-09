@@ -1,0 +1,28 @@
+.input-bar{
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-bar input{
+   width: 45vw;
+   padding: 1rem 2rem;
+   border-radius: 20px;
+   border: 2px solid rgba(0, 0, 0, 0.2);
+   outline: none;
+   background-color: #C4DFDF;
+   font-weight: 500;
+   font-size: 16px;
+}
+.input-bar input::placeholder{
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.input-bar input:hover{
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    background-color: rgb(196, 223, 223,0.8);
+}
+
+.input-bar img{
+    width: 30px;
+}
